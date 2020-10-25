@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Places</title>
+</head>
+
+<body>
+  <h1>All Burger Places</h1>
+  <div>
+    <a href="/burgers/new">Add Burger Place</a>
+  </div>
+  <ul>
+    <%for (let burger of burgers) {%>
+    <li><a href="/burgers/<%= burger._id %>"><%= burger.title %></a></li>
+    <% }%>
+
+  </ul>
+</body>
+
+</html>

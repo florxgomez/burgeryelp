@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Burger Place</title>
+</head>
+
+<body>
+  <h1>Edit <%=burger.title%></h1>
+  <form action="/burgers/<%=burger._id%>?_method=PUT" method="POST">
+    <div>
+      <label for="title">Name</label>
+      <input type="text" id="title" name="burger[title]" value="<%=burger.title%>">
+    </div>
+    <div>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="burger[location]" value="<%=burger.location%>">
+    </div>
+    <button>Update Burger Place</button>
+  </form>
+  <a href="/burgers/<%= burger._id%>">Back to Burger Place</a>
+</body>
+
+</html>

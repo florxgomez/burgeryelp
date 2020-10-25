@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show</title>
+</head>
+
+<body>
+  <h1><%= burger.title %></h1>
+  <h2><%= burger.location %></h2>
+  <footer>
+    <p>
+      <a href="/burgers/<%=burger._id%>/edit">Edit</a>
+    </p>
+    <p>
+    <form action="/burgers/<%=burger._id%>?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+    </p>
+    <a href="/burgers">All Burger Places</a>
+  </footer>
+</body>
+
+</html>

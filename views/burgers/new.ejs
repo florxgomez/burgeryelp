@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Burger Place</title>
+</head>
+
+<body>
+  <form action="/burgers" method="POST">
+    <div>
+      <label for="title">Name</label>
+      <input type="text" id="title" name="burger[title]">
+    </div>
+    <div>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="burger[location]">
+    </div>
+    <button>Add Burger Place</button>
+  </form>
+  <a href="/burgers">All Burger Places</a>
+</body>
+
+</html>
