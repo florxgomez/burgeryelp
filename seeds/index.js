@@ -22,6 +22,8 @@ const seedDB = async () => {
     const burger = new Burger({
       title: `${burgersNames[i]}`,
       location: `${cities[random1000].city}, ${cities[random1000].state}`,
+      image: 'https://source.unsplash.com/collection/9583554',
+      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias adipisci, unde aspernatur quibusdam quia quae commodi molestiae dolorem repellendus, cumque, recusandae autem odit eveniet sint excepturi corrupti distinctio nisi accusantium!'
     });
     await burger.save();
   }

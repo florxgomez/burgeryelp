@@ -1,26 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Burger Place</title>
-</head>
-
-<body>
-  <h1>Edit <%=burger.title%></h1>
-  <form action="/burgers/<%=burger._id%>?_method=PUT" method="POST">
-    <div>
-      <label for="title">Name</label>
-      <input type="text" id="title" name="burger[title]" value="<%=burger.title%>">
-    </div>
-    <div>
-      <label for="location">Location</label>
-      <input type="text" id="location" name="burger[location]" value="<%=burger.location%>">
-    </div>
-    <button>Update Burger Place</button>
-  </form>
-  <a href="/burgers/<%= burger._id%>">Back to Burger Place</a>
-</body>
-
-</html>
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">Edit Burger Place</h1>
+  <div class="col-6 offset-3">
+    <form action="/burgers/<%=burger._id%>?_method=PUT" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="title">Name</label>
+        <input class="form-control" type="text" id="title" name="burger[title]" value="<%=burger.title%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input class="form-control" type="text" id="location" name="burger[location]" value="<%=burger.location%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Image URL</label>
+        <input class="form-control" type="text" id="image" name="burger[image]" value="<%=burger.image%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control" type="text" id="description"
+          name="burger[description]"> <%=burger.description%></textarea>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Update</button>
+      </div>
+    </form>
+    <a href="/burgers/<%= burger._id%>">Back to Burger Place</a>
+  </div>
+</div>
